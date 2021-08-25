@@ -145,6 +145,7 @@
 
 
 #ifdef CONFIG_HIMCI
+#define HIMCI_PHASE_SCALE               8
 #define CONFIG_HIMCI_MAX_FREQ           50000000
 #define CONFIG_MMC_POWER_OFF_TIMEOUT    5
 #define CONFIG_MMC_POWER_ON_TIMEROUT    40
@@ -230,7 +231,7 @@
 
 #if (CONFIG_AUTO_UPDATE == 1)
 #define CONFIG_AUTO_UPDATE_ADAPTATION   1
-/*#define CONFIG_AUTO_SD_UPDATE     1*/
+#define CONFIG_AUTO_SD_UPDATE     1
 /*#define CONFIG_AUTO_USB_UPDATE        1*/
 
 #define CONFIG_CMD_FAT          1
