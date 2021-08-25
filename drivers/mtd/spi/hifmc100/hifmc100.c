@@ -888,6 +888,8 @@ void spi_lock_update_address(struct hifmc_host *host)
             }
             return;
         case MID_CFEON:
+        case MID_XMC:
+        case MID_XTX:
             if (host->level != lock_level_max)
                 host->end_addr = chipsize - (erasesize
                                              << (host->level - 1));
@@ -917,6 +919,8 @@ void hifmc100_get_bp_lock_level(struct hifmc_host *host)
         case MID_GD:
         case MID_ESMT:
         case MID_CFEON:
+        case MID_XMC:
+        case MID_XTX:
         case MID_SPANSION:
             host->bp_num = BP_NUM_3;
             host->level = hifmc100_bp_to_level(host);
@@ -996,6 +1000,8 @@ unsigned short hifmc100_set_spi_lock_info(struct hifmc_host *host)
         case MID_GD:
         case MID_ESMT:
         case MID_CFEON:
+        case MID_XMC:
+        case MID_XTX:
         case MID_WINBOND:
             val = hifmc100_handle_bp_rdsr_info(host, SPI_CMD_RDSR);
             break;
@@ -1056,7 +1062,7 @@ unsigned short hifmc100_handle_bp_rdsr_info(struct hifmc_host *host,
     /* get the block protect level and B/T info in status register */
     val = spi_general_get_flash_register(spi, cmd);
     FMC_PR(BP_DBG, "Get Status Register[%#x]\n", val);
-    if (mid == MID_CFEON) {
+    if (mid == MID_CFEON || MID_XMC || MID_XTX ) {
         val &= SPI_BP_BOTTOM_RDSR_SET_0(host->bp_num);
     } else {
         val |= SPI_BP_BOTTOM_RDSR_SET_1(host->bp_num);

@@ -149,19 +149,19 @@
 
 #define SET_READ_QUAD(_dummy_, _size_, _clk_) \
     static struct spi_op read_quad_##_dummy_##_size_##_clk_ = { \
-    SPI_IF_READ_QUAD, SPI_CMD_READ_QUAD, _dummy_, _size_, _clk_ }
+    SPI_IF_READ_DUAL, SPI_CMD_READ_DUAL, _dummy_, _size_, _clk_ }
 
 #define SET_READ_QUAD4B(_dummy_, _size_, _clk_) \
     static struct spi_op read_quad4b_##_dummy_##_size_##_clk_ = { \
-    SPI_IF_READ_QUAD, SPI_CMD_READ_QUAD4B, _dummy_, _size_, _clk_ }
+    SPI_IF_READ_DUAL, SPI_CMD_READ_DUAL4B, _dummy_, _size_, _clk_ }
 
 #define SET_READ_QUAD_ADDR(_dummy_, _size_, _clk_) \
     static struct spi_op read_quad_addr_##_dummy_##_size_##_clk_ = { \
-    SPI_IF_READ_QUAD_ADDR, SPI_CMD_READ_QUAD_ADDR, _dummy_, _size_, _clk_ }
+    SPI_IF_READ_DUAL_ADDR, SPI_CMD_READ_DUAL_ADDR, _dummy_, _size_, _clk_ }
 
 #define SET_READ_QUAD_ADDR4B(_dummy_, _size_, _clk_) \
     static struct spi_op read_quad_addr4b_##_dummy_##_size_##_clk_ = { \
-    SPI_IF_READ_QUAD_ADDR, SPI_CMD_READ_QUAD_ADDR4B, _dummy_, _size_, _clk_ }
+    SPI_IF_READ_DUAL_ADDR, SPI_CMD_READ_DUAL_ADDR4B, _dummy_, _size_, _clk_ }
 
 #ifdef CONFIG_DTR_MODE_SUPPORT
 #define SET_READ_QUAD_DTR(_dummy_, _size_, _clk_) \
@@ -205,19 +205,19 @@ SPI_IF_WRITE_DUAL_ADDR, SPI_CMD_WRITE_DUAL_ADDR4B, _dummy_, _size_, _clk_ }
 
 #define SET_WRITE_QUAD(_dummy_, _size_, _clk_) \
     static struct spi_op write_quad_##_dummy_##_size_##_clk_ = { \
-    SPI_IF_WRITE_QUAD, SPI_CMD_WRITE_QUAD, _dummy_, _size_, _clk_ }
+    SPI_IF_WRITE_STD, SPI_CMD_WRITE_STD, _dummy_, _size_, _clk_ }
 
 #define SET_WRITE_QUAD4B(_dummy_, _size_, _clk_) \
     static struct spi_op write_quad4b_##_dummy_##_size_##_clk_ = { \
-    SPI_IF_WRITE_QUAD, SPI_CMD_WRITE_QUAD4B, _dummy_, _size_, _clk_ }
+    SPI_IF_WRITE_STD, SPI_CMD_WRITE_STD4B, _dummy_, _size_, _clk_ }
 
 #define SET_WRITE_QUAD_ADDR(_dummy_, _size_, _clk_) \
     static struct spi_op write_quad_addr_##_dummy_##_size_##_clk_ = { \
-SPI_IF_WRITE_QUAD_ADDR, SPI_CMD_WRITE_QUAD_ADDR, _dummy_, _size_, _clk_ }
+SPI_IF_WRITE_STD, SPI_CMD_WRITE_STD, _dummy_, _size_, _clk_ }
 
 #define SET_WRITE_QUAD_ADDR4B(_dummy_, _size_, _clk_) \
     static struct spi_op write_quad_addr4b_##_dummy_##_size_##_clk_ = { \
-SPI_IF_WRITE_QUAD_ADDR, SPI_CMD_WRITE_QUAD_ADDR4B, _dummy_, _size_, _clk_ }
+SPI_IF_WRITE_STD, SPI_CMD_WRITE_STD, _dummy_, _size_, _clk_ }
 
 /*****************************************************************************/
 #define SET_ERASE_SECTOR_4K(_dummy_, _size_, _clk_) \

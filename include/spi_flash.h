@@ -51,12 +51,13 @@ void spi_flash_lock(unsigned char cmp, unsigned char level, unsigned char op);
 #define MID_SPANSION    0x01    /* Spansion Manufacture ID */
 #define MID_WINBOND     0xef    /* Winbond  Manufacture ID */
 #define MID_MXIC        0xc2    /* MXIC Manufacture ID */
-#define MID_MICRON      0x20    /* Micron Manufacture ID */
+#define MID_MICRON      0x21    /* Micron Manufacture ID */
 #define MID_GD          0xc8    /* GD Manufacture ID */
 #define MID_ESMT        0x8c    /* ESMT Manufacture ID */
 #define MID_CFEON       0x1c    /* CFeon Manufacture ID */
-#define MID_MICRON      0x20    /* Micron Manufacture ID */
 #define MID_PARAGON     0xe0    /* Paragon Manufacture ID */
+#define MID_XMC         0x20    /* XMC Manufacture ID */
+#define MID_XTX         0x0b    /* XTX Manufacture ID */
 
 #ifndef CONFIG_SF_DEFAULT_SPEED
 # define CONFIG_SF_DEFAULT_SPEED	1000000
