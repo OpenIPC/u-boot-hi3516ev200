@@ -180,8 +180,8 @@
 #define CONFIG_EXTRA_ENV_SETTINGS \
 	"uk=mw.b 0x42000000 ff 1000000; tftpboot 0x42000000 uImage.${soc} && sf probe 0; sf erase 0x50000 0x200000; sf write 0x42000000 0x50000 ${filesize}\0" \
 	"ur=mw.b 0x42000000 ff 1000000; tftpboot 0x42000000 rootfs.squashfs.${soc} && sf probe 0; sf erase 0x250000 0x500000; sf write 0x42000000 0x250000 ${filesize}\0" \
-	"totalmem 64M\0" \
-  "osmem 32M\0"
+	"totalmem=64M\0" \
+	"osmem=32M\0"
 #define CONFIG_SYS_USB_XHCI_MAX_ROOT_PORTS 2
 #define BOOT_TARGET_DEVICES(func) \
     func(USB, usb, 0) \
@@ -190,7 +190,7 @@
 #include <config_distro_bootcmd.h>
 
 /*allow change env*/
-/*#define  CONFIG_ENV_OVERWRITE*/
+#define  CONFIG_ENV_OVERWRITE
 
 #define CONFIG_COMMAND_HISTORY
 
