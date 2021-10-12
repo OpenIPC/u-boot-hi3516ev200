@@ -1174,9 +1174,31 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         &spi_driver_f25l64q,
     },
 
-	/* FM 3.3v */
+	/* FUDAN FM 3.3v */
+  {
+		"FM25Q64-SOB-T-G", {0xa1, 0x40, 0x17}, 3, _8M,  _64K, 3,
+		{
+			&READ_STD(0, INFINITE, 66),
+			&READ_DUAL(1, INFINITE, 104),
+			&READ_DUAL_ADDR(1, INFINITE, 104),
+			&READ_QUAD(1, INFINITE, 104),
+			&READ_QUAD_ADDR(3, INFINITE, 104),
+			0
+		},
+		{
+			&WRITE_STD(0, 256, 104),
+			&WRITE_QUAD(0, 256, 104),
+			0
+		},
+		{
+			&ERASE_SECTOR_64K(0, _64K, 104),
+			0
+		},
+		&spi_driver_general,
+	},
+
 	{
-		"FM25Q128A", {0xa1, 0x40, 0x18}, 3, _16M,  _64K, 3,
+		"FM25Q128A-SOB-T-G", {0xa1, 0x40, 0x18}, 3, _16M,  _64K, 3,
 		{
 			&READ_STD(0, INFINITE, 80),
 			&READ_DUAL(1, INFINITE, 108),
@@ -1194,8 +1216,9 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 			&ERASE_SECTOR_64K(0, _64K, 80),
 			0
 		},
-		&spi_driver_xtx,
+		&spi_driver_general,
 	},
+
     /* GD GD25LQ128 1.8V */
     {
         "GD25LQ128", {0xC8, 0x60, 0x18}, 3, _16M,  _64K, 3,
@@ -1511,7 +1534,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         },
         &spi_driver_no_qe,
     },
-    
+
 	/* XTX 3.3v */
 	{
 		"XT25F128BSSI/HGU", {0x0B, 0x40, 0x18}, 3, _16M,  _64K, 3,

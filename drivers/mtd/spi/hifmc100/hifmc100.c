@@ -922,6 +922,7 @@ void hifmc100_get_bp_lock_level(struct hifmc_host *host)
         case MID_XMC:
         case MID_XTX:
         case MID_SPANSION:
+        case MID_FM:
             host->bp_num = BP_NUM_3;
             host->level = hifmc100_bp_to_level(host);
             break;
@@ -1003,6 +1004,7 @@ unsigned short hifmc100_set_spi_lock_info(struct hifmc_host *host)
         case MID_XMC:
         case MID_XTX:
         case MID_WINBOND:
+        case MID_FM:
             val = hifmc100_handle_bp_rdsr_info(host, SPI_CMD_RDSR);
             break;
         default:
