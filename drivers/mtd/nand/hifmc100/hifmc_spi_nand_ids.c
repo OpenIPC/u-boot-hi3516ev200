@@ -432,6 +432,69 @@ struct spi_nand_info hifmc_spi_nand_flash_table[] = {
         .driver    = &spi_driver_general,
     },
 
+    /* GD 3.3v GD5F1GQ4UCYIG 1Gbit */
+    {
+        .name      = "GD5F1GQ4UCYIG",
+        .id        = {0xb1, 0x48},
+        .id_len    = 2,
+        .chipsize  = _128M,
+        .erasesize = _128K,
+        .pagesize  = _2K,
+        .oobsize   = 128,
+        .badblock_pos = BBP_FIRST_PAGE,
+        .read      = {
+            &READ_STD(1, INFINITE, 24),
+            &READ_FAST(1, INFINITE, 120),
+            &READ_DUAL(1, INFINITE, 120),
+            &READ_DUAL_ADDR(1, INFINITE, 120),
+            &READ_QUAD(1, INFINITE, 120),
+            &READ_QUAD_ADDR(1, INFINITE, 120),
+            0
+        },
+        .write     = {
+            &WRITE_STD(0, 256, 24),
+            &WRITE_QUAD(0, 256, 120),
+            0
+        },
+        .erase     = {
+            &ERASE_SECTOR_128K(0, _128K, 24),
+            0
+        },
+        .driver    = &spi_driver_general,
+    },
+
+
+    /* GD 3.3v GD5F1GQ4UAYIG 1Gbit */
+    {
+        .name      = "GD5F1GQ4UAYIG",
+        .id        = {0xc8, 0xf1},
+        .id_len    = 2,
+        .chipsize  = _128M,
+        .erasesize = _128K,
+        .pagesize  = _2K,
+        .oobsize   = 64,
+        .badblock_pos = BBP_FIRST_PAGE,
+        .read      = {
+            &READ_STD(1, INFINITE, 24),
+            &READ_FAST(1, INFINITE, 120),
+            &READ_DUAL(1, INFINITE, 120),
+            &READ_DUAL_ADDR(1, INFINITE, 120),
+            &READ_QUAD(1, INFINITE, 120),
+            &READ_QUAD_ADDR(1, INFINITE, 120),
+            0
+        },
+        .write     = {
+            &WRITE_STD(0, 256, 24),
+            &WRITE_QUAD(0, 256, 120),
+            0
+        },
+        .erase     = {
+            &ERASE_SECTOR_128K(0, _128K, 24),
+            0
+        },
+        .driver    = &spi_driver_general,
+    },
+
     /* GD 1.8v GD5F1GQ4RB9IG 1Gbit */
     {
         .name      = "GD5F1GQ4RB9IG",
