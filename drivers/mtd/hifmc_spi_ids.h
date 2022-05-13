@@ -46,6 +46,7 @@
 #define SPI_IF_ERASE_SECTOR_256K    (0x10)
 
 /*****************************************************************************/
+#ifndef CONFIG_CLOSE_SPI_8PIN_4IO
 #define HIFMC_SPI_NOR_SUPPORT_READ  (SPI_IF_READ_STD \
                     | SPI_IF_READ_FAST \
                     | SPI_IF_READ_DUAL \
@@ -53,25 +54,45 @@
                     | SPI_IF_READ_QUAD \
                     | SPI_IF_READ_QUAD_ADDR\
                     | SPI_IF_READ_QUAD_DTR)
+#else
+#define HIFMC_SPI_NOR_SUPPORT_READ  (SPI_IF_READ_STD \
+                    | SPI_IF_READ_FAST \
+                    | SPI_IF_READ_DUAL \
+                    | SPI_IF_READ_DUAL_ADDR)
+#endif
 
+#ifndef CONFIG_CLOSE_SPI_8PIN_4IO
 #define HIFMC_SPI_NOR_SUPPORT_WRITE (SPI_IF_WRITE_STD \
                     | SPI_IF_WRITE_DUAL \
                     | SPI_IF_WRITE_DUAL_ADDR \
                     | SPI_IF_WRITE_QUAD \
                     | SPI_IF_WRITE_QUAD_ADDR)
-
+#else
+#define HIFMC_SPI_NOR_SUPPORT_WRITE (SPI_IF_WRITE_STD)
+#endif
 #define HIFMC_SPI_NOR_STR_MAX_DUMMY     7
 #define HIFMC_SPI_NOR_DTR_MAX_DUMMY     12
 
 /******************************************************************************/
+#ifndef CONFIG_CLOSE_SPI_8PIN_4IO
 #define HIFMC_SPI_NAND_SUPPORT_READ (SPI_IF_READ_STD \
                     | SPI_IF_READ_FAST \
                     | SPI_IF_READ_DUAL \
                     | SPI_IF_READ_DUAL_ADDR \
                     | SPI_IF_READ_QUAD \
                     | SPI_IF_READ_QUAD_ADDR)
+#else
+#define HIFMC_SPI_NAND_SUPPORT_READ (SPI_IF_READ_STD \
+                    | SPI_IF_READ_FAST \
+                    | SPI_IF_READ_DUAL \
+                    | SPI_IF_READ_DUAL_ADDR)
+#endif
 
+#ifndef CONFIG_CLOSE_SPI_8PIN_4IO
 #define HIFMC_SPI_NAND_SUPPORT_WRITE    (SPI_IF_WRITE_STD | SPI_IF_WRITE_QUAD)
+#else
+#define HIFMC_SPI_NAND_SUPPORT_WRITE    (SPI_IF_WRITE_STD)
+#endif
 
 #define HIFMC_SPI_NAND_SUPPORT_MAX_DUMMY    8
 

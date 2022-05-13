@@ -66,7 +66,6 @@ SET_READ_QUAD_ADDR(1, INFINITE, 104);
 SET_READ_QUAD_ADDR(2, INFINITE, 104);
 SET_READ_QUAD_ADDR(1, INFINITE, 108);
 SET_READ_QUAD_ADDR(1, INFINITE, 120);
-
 /*****************************************************************************/
 SET_WRITE_STD(0, 256, 24);
 SET_WRITE_STD(0, 256, 75);
@@ -79,7 +78,6 @@ SET_WRITE_QUAD(0, 256, 100);
 SET_WRITE_QUAD(0, 256, 104);
 SET_WRITE_QUAD(0, 256, 108);
 SET_WRITE_QUAD(0, 256, 120);
-
 /*****************************************************************************/
 SET_ERASE_SECTOR_128K(0, _128K, 24);
 SET_ERASE_SECTOR_128K(0, _128K, 75);
