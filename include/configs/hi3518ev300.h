@@ -49,8 +49,6 @@
 #define CONFIG_SYS_LOAD_ADDR        (CONFIG_SYS_SDRAM_BASE + 0x80000)
 #define CONFIG_SYS_GBL_DATA_SIZE    128
 
-#define CONFIG_SYS_MEMTEST_START	CONFIG_SYS_SDRAM_BASE + 0x400
-#define CONFIG_SYS_MEMTEST_END		PHYS_SDRAM_1_SIZE - 0x1000000
 /* Generic Timer Definitions */
 #define COUNTER_FREQUENCY       0x1800000
 
@@ -145,7 +143,7 @@
 #define CONFIG_SDHCI_ADMA
 #endif
 
-
+/*
 #ifdef CONFIG_HIMCI
 #define CONFIG_HIMCI_MAX_FREQ           50000000
 #define CONFIG_MMC_POWER_OFF_TIMEOUT    5
@@ -153,8 +151,7 @@
 #define CONFIG_MMC_RESET_LOW_TIMEOUT    10
 #define CONFIG_MMC_RESET_HIGH_TIMEROUT  300
 #endif
-
-#define HIMCI_PHASE_SCALE       8
+*/
 #define CONFIG_MISC_INIT_R
 
 /* Command line configuration */
@@ -176,13 +173,7 @@
  */
 
 /* Assume we boot with root on the seventh partition of eMMC */
-#define CONFIG_BOOTARGS "mem=${osmem:-32M} console=ttyAMA0,115200 panic=20 root=/dev/mtdblock3 rootfstype=squashfs init=/init mtdparts=hi_sfc:256k(boot),64k(env),2048k(kernel),5120k(rootfs),-(rootfs_data)"
-#define CONFIG_BOOTCOMMAND "setenv setargs setenv bootargs ${bootargs}; run setargs; sf probe 0; sf read 0x42000000 0x50000 0x200000; bootm 0x42000000"
-#define CONFIG_EXTRA_ENV_SETTINGS \
-	"uk=mw.b 0x42000000 ff 1000000; tftpboot 0x42000000 uImage.${soc} && sf probe 0; sf erase 0x50000 0x200000; sf write 0x42000000 0x50000 ${filesize}\0" \
-	"ur=mw.b 0x42000000 ff 1000000; tftpboot 0x42000000 rootfs.squashfs.${soc} && sf probe 0; sf erase 0x250000 0x500000; sf write 0x42000000 0x250000 ${filesize}\0" \
-	"totalmem=64M\0" \
-	"osmem=32M\0"
+#define CONFIG_BOOTARGS "console=ttyAMA0,115200n8 root=/dev/mtdblock2 rw"
 #define CONFIG_SYS_USB_XHCI_MAX_ROOT_PORTS 2
 #define BOOT_TARGET_DEVICES(func) \
     func(USB, usb, 0) \
@@ -198,14 +189,9 @@
 #endif
 
 /* env in flash instead of CFG_ENV_IS_NOWHERE */
-#ifndef CONFIG_XM_COMPATIBLE
-    #define CONFIG_ENV_OFFSET       0x40000      /* environment starts here */
-#else
-    #define CONFIG_ENV_OFFSET       0x30000      /* environment starts here */
-#endif
+#define CONFIG_ENV_OFFSET       0x80000      /* environment starts here */
 
-
-#define CONFIG_ENV_SIZE         0x10000
+#define CONFIG_ENV_SIZE         0x40000
 #define CONFIG_ENV_SECT_SIZE        0x10000
 #define CONFIG_ENV_VARS_UBOOT_CONFIG
 
@@ -235,7 +221,7 @@
 
 #if (CONFIG_AUTO_UPDATE == 1)
 #define CONFIG_AUTO_UPDATE_ADAPTATION   1
-#define CONFIG_AUTO_SD_UPDATE     1
+/*#define CONFIG_AUTO_SD_UPDATE     1*/
 /*#define CONFIG_AUTO_USB_UPDATE    1*/
 
 #ifndef CONFIG_MINI_BOOT
@@ -285,18 +271,7 @@
 /*#define CONFIG_AUDIO_ENABLE*/
 
 /*#define CONFIG_EDMA_PLL_TRAINNING*/
-#define CONFIG_SD_BOOT 1
-#define CONFIG_SPI_BOOT 1
-#define CONFIG_BOOTDELAY 1
-#define CONFIG_KERNEL_LOAD_ADDR 0x42000000
-#define CONFIG_CMD_TFTPPUT 1
-#define CONFIG_CMD_FAT 1
-#define CONFIG_FAT_WRITE 1
-#define CONFIG_CMD_FS_GENERIC 1
-#define CONFIG_SPI_BLOCK_PROTECT 1
-#define CONFIG_NETMASK 255.255.255.0
-#define CONFIG_GATEWAYIP 192.168.1.1
-#define CONFIG_SERVERIP 192.168.1.1
-#define CONFIG_IPADDR 192.168.1.10
+
+#include <configs/hi-common.h>
 
 #endif /* __HI3518EV300_H */

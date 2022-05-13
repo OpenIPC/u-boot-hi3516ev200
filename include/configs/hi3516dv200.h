@@ -261,4 +261,6 @@
 
 /*#define CONFIG_EDMA_PLL_TRAINNING*/
 
+#include <configs/hi-common.h>
+
 #endif /* __HI3516DV200_H */
