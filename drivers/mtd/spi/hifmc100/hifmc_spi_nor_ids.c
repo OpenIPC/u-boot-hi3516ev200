@@ -300,7 +300,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 33),
             &READ_FAST(1, INFINITE, 86),
-            &READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
             0
         },
         {
@@ -319,21 +319,21 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 133),
-            &READ_DUAL(1, INFINITE, 133),
-            &READ_DUAL_ADDR(1, INFINITE, 133),
-            &READ_QUAD(1, INFINITE, 133),
-            &READ_QUAD_ADDR(3, INFINITE, 133),
+            // //&READ_DUAL(1, INFINITE, 133),
+            // //&READ_DUAL_ADDR(1, INFINITE, 133),
+            //&READ_QUAD(1, INFINITE, 133),
+            //&READ_QUAD_ADDR(3, INFINITE, 133),
             0
         },
 
         {
-            &WRITE_STD(0, 256, 133),
-            &WRITE_QUAD_ADDR(0, 256, 133),
+            &WRITE_STD(0, 256, 33),
+            //&WRITE_QUAD_ADDR(0, 256, 133),
             0
         },
 
         {
-            &ERASE_SECTOR_64K(0, _64K, 133),
+            &ERASE_SECTOR_64K(0, _64K, 33),
             0
         },
         &spi_driver_mx25l25635e,
@@ -345,16 +345,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 33),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 33),
-            &WRITE_QUAD_ADDR(0, 256, 80),
+            //&WRITE_QUAD_ADDR(0, 256, 80),
             0
         },
 
@@ -371,16 +371,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 33),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 33),
-            &WRITE_QUAD_ADDR(0, 256, 33),
+            //&WRITE_QUAD_ADDR(0, 256, 33),
             0
         },
 
@@ -398,16 +398,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 33),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 33),
-            &WRITE_QUAD_ADDR(0, 256, 80),
+            //&WRITE_QUAD_ADDR(0, 256, 80),
             0
         },
 
@@ -425,16 +425,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 108),
-            &READ_DUAL(1, INFINITE, 108),
-            &READ_DUAL_ADDR(1, INFINITE, 108),
-            &READ_QUAD(1, INFINITE, 108),
-            &READ_QUAD_ADDR(3, INFINITE, 108),
+            //&READ_DUAL(1, INFINITE, 108),
+            //&READ_DUAL_ADDR(1, INFINITE, 108),
+            //&READ_QUAD(1, INFINITE, 108),
+            //&READ_QUAD_ADDR(3, INFINITE, 108),
             0
         },
 
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD_ADDR(0, 256, 108),
+            //&WRITE_QUAD_ADDR(0, 256, 108),
             0
         },
 
@@ -451,16 +451,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 55),
             &READ_FAST(1, INFINITE, 108),
-            &READ_DUAL(1, INFINITE, 108),
-            &READ_DUAL_ADDR(1, INFINITE, 108),
-            &READ_QUAD(1, INFINITE, 108),
-            &READ_QUAD_ADDR(3, INFINITE, 108),
+            //&READ_DUAL(1, INFINITE, 108),
+            //&READ_DUAL_ADDR(1, INFINITE, 108),
+            //&READ_QUAD(1, INFINITE, 108),
+            //&READ_QUAD_ADDR(3, INFINITE, 108),
             0
         },
 
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD_ADDR(0, 256, 108),
+            //&WRITE_QUAD_ADDR(0, 256, 108),
             0
         },
 
@@ -476,19 +476,19 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, 104),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
 #ifdef CONFIG_DTR_MODE_SUPPORT
-            &READ_QUAD_DTR(10, INFINITE, 100/* 84 */),
+            //&READ_QUAD_DTR(10, INFINITE, 100/* 84 */),
 #endif
             0
         },
 
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD_ADDR(0, 256, 104),
+            //&WRITE_QUAD_ADDR(0, 256, 104),
             0
         },
 
@@ -505,19 +505,19 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 55),
             &READ_FAST4B(1, INFINITE, 108),
-            &READ_DUAL4B(1, INFINITE, 108),
-            &READ_DUAL_ADDR4B(1, INFINITE, 108),
-            &READ_QUAD4B(1, INFINITE, 108),
-            &READ_QUAD_ADDR4B(3, INFINITE, 108),
+            //&READ_DUAL4B(1, INFINITE, 108),
+            //&READ_DUAL_ADDR4B(1, INFINITE, 108),
+            //&READ_QUAD4B(1, INFINITE, 108),
+            //&READ_QUAD_ADDR4B(3, INFINITE, 108),
 #ifdef CONFIG_DTR_MODE_SUPPORT
-            &READ_QUAD_DTR4B(10, INFINITE, 100),
+            //&READ_QUAD_DTR4B(10, INFINITE, 100),
 #endif
             0
         },
 
         {
             &WRITE_STD4B(0, 256, 80),
-            &WRITE_QUAD_ADDR4B(0, 256, 108),
+            //&WRITE_QUAD_ADDR4B(0, 256, 108),
             0
         },
 
@@ -535,19 +535,19 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 50),
             &READ_FAST4B(1, INFINITE, 80/* 84 */),
-            &READ_DUAL4B(1, INFINITE, 80/* 84 */),
-            &READ_DUAL_ADDR4B(1, INFINITE, 80/* 84 */),
-            &READ_QUAD4B(1, INFINITE, 80/* 84 */),
-            &READ_QUAD_ADDR4B(3, INFINITE, 80/* 84 */),
+            //&READ_DUAL4B(1, INFINITE, 80/* 84 */),
+            //&READ_DUAL_ADDR4B(1, INFINITE, 80/* 84 */),
+            //&READ_QUAD4B(1, INFINITE, 80/* 84 */),
+            //&READ_QUAD_ADDR4B(3, INFINITE, 80/* 84 */),
 #ifdef CONFIG_DTR_MODE_SUPPORT
-            &READ_QUAD_DTR4B(10, INFINITE, 100/* 84 */),
+            //&READ_QUAD_DTR4B(10, INFINITE, 100/* 84 */),
 #endif
             0
         },
 
         {
             &WRITE_STD4B(0, 256, 120/* 133 */),
-            &WRITE_QUAD_ADDR4B(0, 256, 120/* 133 */),
+            //&WRITE_QUAD_ADDR4B(0, 256, 120/* 133 */),
             0
         },
 
@@ -564,19 +564,19 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 66),
             &READ_FAST4B(1, INFINITE, 104),
-            &READ_DUAL4B(1, INFINITE, 104),
-            &READ_DUAL_ADDR4B(1, INFINITE, 104),
-            &READ_QUAD4B(1, INFINITE, 104),
-            &READ_QUAD_ADDR4B(3, INFINITE, 104),
+            //&READ_DUAL4B(1, INFINITE, 104),
+            //&READ_DUAL_ADDR4B(1, INFINITE, 104),
+            //&READ_QUAD4B(1, INFINITE, 104),
+            //&READ_QUAD_ADDR4B(3, INFINITE, 104),
 #ifdef CONFIG_DTR_MODE_SUPPORT
-            &READ_QUAD_DTR4B(10, INFINITE, 100),
+            //&READ_QUAD_DTR4B(10, INFINITE, 100),
 #endif
             0
         },
 
         {
             &WRITE_STD4B(0, 256, 104),
-            &WRITE_QUAD_ADDR4B(0, 256, 104),
+            //&WRITE_QUAD_ADDR4B(0, 256, 104),
             0
         },
 
@@ -594,16 +594,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 40),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 64),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 64),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
 
@@ -620,16 +620,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 50),
             &READ_FAST4B(1, INFINITE, 133),
-            &READ_DUAL4B(1, INFINITE, 104),
-            &READ_DUAL_ADDR4B(1, INFINITE, 104),
-            &READ_QUAD4B(1, INFINITE, 104),
-            &READ_QUAD_ADDR4B(3, INFINITE, 104),
+            //&READ_DUAL4B(1, INFINITE, 104),
+            //&READ_DUAL_ADDR4B(1, INFINITE, 104),
+            //&READ_QUAD4B(1, INFINITE, 104),
+            //&READ_QUAD_ADDR4B(3, INFINITE, 104),
             0
         },
 
         {
             &WRITE_STD4B(0, 256, 104),
-            &WRITE_QUAD4B(0, 256, 80),
+            //&WRITE_QUAD4B(0, 256, 80),
             0
         },
 
@@ -646,9 +646,9 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 54),
             &READ_FAST(1, INFINITE, 108),
-            &READ_DUAL(1, INFINITE, 108),
-            &READ_DUAL_ADDR(2, INFINITE, 108),
-            &READ_QUAD(1, INFINITE, 108),
+            //&READ_DUAL(1, INFINITE, 108),
+            //&READ_DUAL_ADDR(2, INFINITE, 108),
+            //&READ_QUAD(1, INFINITE, 108),
             0
         },
 
@@ -656,7 +656,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
             &WRITE_STD(0, 256, 80),
             &WRITE_DUAL(0, 256, 108),
             &WRITE_DUAL_ADDR(0, 256, 108),
-            &WRITE_QUAD(0, 256, 108),
+            //&WRITE_QUAD(0, 256, 108),
             0
         },
 
@@ -674,10 +674,10 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 54),
             &READ_FAST(1, INFINITE, 108),
-            &READ_DUAL(1, INFINITE, 108),
-            &READ_DUAL_ADDR(2, INFINITE, 108),
-            &READ_QUAD(1, INFINITE, 108),
-            &READ_QUAD_ADDR(5, INFINITE, 108),
+            //&READ_DUAL(1, INFINITE, 108),
+            //&READ_DUAL_ADDR(2, INFINITE, 108),
+            //&READ_QUAD(1, INFINITE, 108),
+            //&READ_QUAD_ADDR(5, INFINITE, 108),
             0
         },
 
@@ -685,7 +685,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
             &WRITE_STD(0, 256, 80),
             &WRITE_DUAL(0, 256, 108),
             &WRITE_DUAL_ADDR(0, 256, 108),
-            &WRITE_QUAD(0, 256, 108),
+            //&WRITE_QUAD(0, 256, 108),
             0
         },
 
@@ -702,10 +702,10 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 54),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(2, INFINITE, 84),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(5, INFINITE, 84),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(2, INFINITE, 84),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(5, INFINITE, 84),
             0
         },
 
@@ -713,7 +713,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
             &WRITE_STD(0, 256, 80),
             &WRITE_DUAL(0, 256, 75),
             &WRITE_DUAL_ADDR(0, 256, 75),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
 
@@ -730,10 +730,10 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 54),
             &READ_FAST(1, INFINITE, 108),
-            &READ_DUAL(1, INFINITE, 84),
-            &READ_DUAL_ADDR(2, INFINITE, 84),
-            &READ_QUAD(1, INFINITE, 84),
-            &READ_QUAD_ADDR(5, INFINITE, 84),
+            //&READ_DUAL(1, INFINITE, 84),
+            //&READ_DUAL_ADDR(2, INFINITE, 84),
+            //&READ_QUAD(1, INFINITE, 84),
+            //&READ_QUAD_ADDR(5, INFINITE, 84),
             0
         },
 
@@ -741,7 +741,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
             &WRITE_STD(0, 256, 108),
             &WRITE_DUAL(0, 256, 108),
             &WRITE_DUAL_ADDR(0, 256, 108),
-            &WRITE_QUAD(0, 256, 108),
+            //&WRITE_QUAD(0, 256, 108),
             0
         },
 
@@ -758,10 +758,10 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 54),
             &READ_FAST4B(1, INFINITE, 133),
-            &READ_DUAL4B(1, INFINITE, 133),
-            &READ_DUAL_ADDR4B(2, INFINITE, 133),
-            &READ_QUAD4B(1, INFINITE, 133),
-            &READ_QUAD_ADDR4B(5, INFINITE, 125),
+            //&READ_DUAL4B(1, INFINITE, 133),
+            //&READ_DUAL_ADDR4B(2, INFINITE, 133),
+            //&READ_QUAD4B(1, INFINITE, 133),
+            //&READ_QUAD_ADDR4B(5, INFINITE, 125),
             0
         },
 
@@ -769,7 +769,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
             &WRITE_STD4B(0, 256, 133),
             &WRITE_DUAL4B(0, 256, 133),
             &WRITE_DUAL_ADDR4B(0, 256, 133),
-            &WRITE_QUAD4B(0, 256, 133),
+            //&WRITE_QUAD4B(0, 256, 133),
             0
         },
 
@@ -786,10 +786,10 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 54),
             &READ_FAST4B(1, INFINITE, 80),
-            &READ_DUAL4B(1, INFINITE, 80),
-            &READ_DUAL_ADDR4B(2, INFINITE, 84),
-            &READ_QUAD4B(1, INFINITE, 80),
-            &READ_QUAD_ADDR4B(5, INFINITE, 84),
+            //&READ_DUAL4B(1, INFINITE, 80),
+            //&READ_DUAL_ADDR4B(2, INFINITE, 84),
+            //&READ_QUAD4B(1, INFINITE, 80),
+            //&READ_QUAD_ADDR4B(5, INFINITE, 84),
             0
         },
 
@@ -797,7 +797,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
             &WRITE_STD4B(0, 256, 80),
             &WRITE_DUAL4B(0, 256, 75),
             &WRITE_DUAL_ADDR4B(0, 256, 75),
-            &WRITE_QUAD4B(0, 256, 80),
+            //&WRITE_QUAD4B(0, 256, 80),
             0
         },
 
@@ -815,14 +815,14 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
 
@@ -838,14 +838,14 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
 
@@ -862,20 +862,20 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 133),
-            &READ_DUAL(1, INFINITE, 133),
-            &READ_QUAD(1, INFINITE, 133),
-            &READ_QUAD_ADDR(3, INFINITE, 133),
+            //&READ_DUAL(1, INFINITE, 133),
+            //&READ_QUAD(1, INFINITE, 133),
+            //&READ_QUAD_ADDR(3, INFINITE, 133),
             0
         },
 
         {
-            &WRITE_STD(0, 256, 133),
-            &WRITE_QUAD(0, 256, 133),
+            &WRITE_STD(0, 256, 33),
+            //&WRITE_QUAD(0, 256, 133),
             0
         },
 
         {
-            &ERASE_SECTOR_64K(0, _64K, 133),
+            &ERASE_SECTOR_64K(0, _64K, 33),
             0
         },
         &spi_driver_w25q256fv,
@@ -886,14 +886,14 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
 
@@ -910,15 +910,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
             0
         },
 
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
 
@@ -935,16 +935,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
             0
         },
 
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
 
@@ -960,14 +960,14 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 33),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, /* 70 */80),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, /* 70 */80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, /* 70 */80),
+            //&WRITE_QUAD(0, 256, /* 70 */80),
             0
         },
 
@@ -984,17 +984,17 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 33),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, /* 70 */80),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, /* 70 */80),
 #ifdef CONFIG_DTR_MODE_SUPPORT
-            &READ_QUAD_DTR(8, INFINITE, 80),
+            //&READ_QUAD_DTR(8, INFINITE, 80),
 #endif
             0
         },
 
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, /* 70 */80),
+            //&WRITE_QUAD(0, 256, /* 70 */80),
             0
         },
 
@@ -1011,16 +1011,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 50),
             &READ_FAST4B(1, INFINITE, 80),
-            &READ_DUAL4B(1, INFINITE, 80),
-            &READ_DUAL_ADDR4B(1, INFINITE, 80),
-            &READ_QUAD4B(1, INFINITE, 80),
-            &READ_QUAD_ADDR4B(3, INFINITE, 80),
+            //&READ_DUAL4B(1, INFINITE, 80),
+            //&READ_DUAL_ADDR4B(1, INFINITE, 80),
+            //&READ_QUAD4B(1, INFINITE, 80),
+            //&READ_QUAD_ADDR4B(3, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD4B(0, 256, 80),
-            &WRITE_QUAD4B(0, 256, 80),
+            //&WRITE_QUAD4B(0, 256, 80),
             0
         },
 
@@ -1037,16 +1037,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 50),
             &READ_FAST4B(1, INFINITE, 133),
-            &READ_DUAL4B(1, INFINITE, 133),
-            &READ_DUAL_ADDR4B(1, INFINITE, 133),
-            &READ_QUAD4B(1, INFINITE, 133),
-            &READ_QUAD_ADDR4B(3, INFINITE, 133),
+            //&READ_DUAL4B(1, INFINITE, 133),
+            //&READ_DUAL_ADDR4B(1, INFINITE, 133),
+            //&READ_QUAD4B(1, INFINITE, 133),
+            //&READ_QUAD_ADDR4B(3, INFINITE, 133),
             0
         },
 
         {
             &WRITE_STD4B(0, 256, 133),
-            &WRITE_QUAD4B(0, 256, 133),
+            //&WRITE_QUAD4B(0, 256, 133),
             0
         },
 
@@ -1063,9 +1063,9 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 80/* 104 */),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            /* &READ_QUAD(3, INFINITE, 80), */
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            /* //&READ_QUAD(3, INFINITE, 80), */
             0
         },
 
@@ -1086,8 +1086,8 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 100),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
             0
         },
 
@@ -1109,11 +1109,11 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
 #ifndef CONFIG_CLOSE_SPI_8PIN_4IO
-            &READ_QUAD(1, INFINITE, 104),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
 #endif
             0
         },
@@ -1135,8 +1135,8 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
             0
         },
 
@@ -1158,13 +1158,13 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 66),
             &READ_FAST(1, INFINITE, /* 66 */100),
-            &READ_DUAL(1, INFINITE, /* 66 */80),
-            &READ_QUAD(1, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, /* 66 */80),
+            //&READ_QUAD(1, INFINITE, 80),
             0
         },
         {
             &WRITE_STD(0, 256, /* 66 */100),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
         {
@@ -1179,15 +1179,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 		"FM25Q64-SOB-T-G", {0xa1, 0x40, 0x17}, 3, _8M,  _64K, 3,
 		{
 			&READ_STD(0, INFINITE, 66),
-			&READ_DUAL(1, INFINITE, 104),
-			&READ_DUAL_ADDR(1, INFINITE, 104),
-			&READ_QUAD(1, INFINITE, 104),
-			&READ_QUAD_ADDR(3, INFINITE, 104),
+			//&READ_DUAL(1, INFINITE, 104),
+			//&READ_DUAL_ADDR(1, INFINITE, 104),
+			//&READ_QUAD(1, INFINITE, 104),
+			//&READ_QUAD_ADDR(3, INFINITE, 104),
 			0
 		},
 		{
 			&WRITE_STD(0, 256, 104),
-			&WRITE_QUAD(0, 256, 104),
+			//&WRITE_QUAD(0, 256, 104),
 			0
 		},
 		{
@@ -1201,15 +1201,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 		"FM25Q128A-SOB-T-G", {0xa1, 0x40, 0x18}, 3, _16M,  _64K, 3,
 		{
 			&READ_STD(0, INFINITE, 80),
-			&READ_DUAL(1, INFINITE, 108),
-			&READ_DUAL_ADDR(1, INFINITE, 108),
-			&READ_QUAD(1, INFINITE, 108),
-			&READ_QUAD_ADDR(3, INFINITE, 72),
+			//&READ_DUAL(1, INFINITE, 108),
+			//&READ_DUAL_ADDR(1, INFINITE, 108),
+			//&READ_QUAD(1, INFINITE, 108),
+			//&READ_QUAD_ADDR(3, INFINITE, 72),
 			0
 		},
 		{
 			&WRITE_STD(0, 256, 80),
-			&WRITE_QUAD(0, 256, 80),
+			//&WRITE_QUAD(0, 256, 80),
 			0
 		},
 		{
@@ -1225,15 +1225,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 80),
             0
         },
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
         {
@@ -1248,16 +1248,16 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD4B(0, INFINITE, 50),
             &READ_FAST4B(1, INFINITE, 80),
-            &READ_DUAL4B(1, INFINITE, 80),
-            &READ_DUAL_ADDR4B(1, INFINITE, 80),
-            &READ_QUAD4B(1, INFINITE, 80),
-            &READ_QUAD_ADDR4B(3, INFINITE, 80),
+            //&READ_DUAL4B(1, INFINITE, 80),
+            //&READ_DUAL_ADDR4B(1, INFINITE, 80),
+            //&READ_QUAD4B(1, INFINITE, 80),
+            //&READ_QUAD_ADDR4B(3, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD4B(0, 256, 80),
-            &WRITE_QUAD4B(0, 256, 80),
+            //&WRITE_QUAD4B(0, 256, 80),
             0
         },
 
@@ -1272,12 +1272,12 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         "GD25Q128", {0xC8, 0x40, 0x18}, 3, _16M,  _64K, 3,
         {
             &READ_STD(0, INFINITE, 66),
-            &READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
             0
         },
         {
             &WRITE_STD(0, 256, 100),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
         {
@@ -1291,12 +1291,12 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         "GD25Q64", {0xC8, 0x40, 0x17}, 3, _8M,  _64K, 3,
         {
             &READ_STD(0, INFINITE, 66),
-            &READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
             0
         },
         {
             &WRITE_STD(0, 256, 100),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
         {
@@ -1311,15 +1311,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 80),
             0
         },
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
         {
@@ -1335,15 +1335,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, 104),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
             0
         },
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 104),
+            //&WRITE_QUAD(0, 256, 104),
             0
         },
         {
@@ -1359,15 +1359,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 80),
-            &READ_DUAL(1, INFINITE, 80),
-            &READ_DUAL_ADDR(1, INFINITE, 80),
-            &READ_QUAD(1, INFINITE, 80),
-            &READ_QUAD_ADDR(3, INFINITE, 80),
+            //&READ_DUAL(1, INFINITE, 80),
+            //&READ_DUAL_ADDR(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD_ADDR(3, INFINITE, 80),
             0
         },
         {
             &WRITE_STD(0, 256, 80),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
         {
@@ -1381,12 +1381,12 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         "GD25Q32", {0xC8, 0x40, 0x16}, 3, _4M,  _64K, 3,
         {
             &READ_STD(0, INFINITE, 66),
-            &READ_QUAD(1, INFINITE, 80),
+            //&READ_QUAD(1, INFINITE, 80),
             0
         },
         {
             &WRITE_STD(0, 256, 100),
-            &WRITE_QUAD(0, 256, 80),
+            //&WRITE_QUAD(0, 256, 80),
             0
         },
         {
@@ -1402,8 +1402,8 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 55),
             &READ_FAST(1, INFINITE, 108),
-            &READ_DUAL(1, INFINITE, 108),
-            &READ_DUAL_ADDR(1, INFINITE, 108),
+            //&READ_DUAL(1, INFINITE, 108),
+            //&READ_DUAL_ADDR(1, INFINITE, 108),
             0
         },
         {
@@ -1422,10 +1422,10 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 55),
             &READ_FAST(1, INFINITE, 108),
-            &READ_DUAL(1, INFINITE, 108),
-            &READ_DUAL_ADDR(1, INFINITE, 108),
-            &READ_QUAD(1, INFINITE, 108),
-            &READ_QUAD_ADDR(3, INFINITE, 108),
+            //&READ_DUAL(1, INFINITE, 108),
+            //&READ_DUAL_ADDR(1, INFINITE, 108),
+            //&READ_QUAD(1, INFINITE, 108),
+            //&READ_QUAD_ADDR(3, INFINITE, 108),
             0
         },
         {
@@ -1445,15 +1445,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, 104),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
             0
         },
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 104),
+            //&WRITE_QUAD(0, 256, 104),
             0
         },
         {
@@ -1469,15 +1469,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 80),
 			&READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, 104),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
             0
         },
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 104),
+            //&WRITE_QUAD(0, 256, 104),
             0
         },
         {
@@ -1493,15 +1493,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, 104),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
             0
         },
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 104),
+            //&WRITE_QUAD(0, 256, 104),
             0
         },
         {
@@ -1517,15 +1517,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
-            &READ_DUAL(1, INFINITE, 104),
-            &READ_DUAL_ADDR(1, INFINITE, 104),
-            &READ_QUAD(1, INFINITE, 104),
-            &READ_QUAD_ADDR(3, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
             0
         },
         {
             &WRITE_STD(0, 256, 104),
-            &WRITE_QUAD(0, 256, 104),
+            //&WRITE_QUAD(0, 256, 104),
             0
         },
         {
@@ -1540,15 +1540,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 		"XT25F128BSSI/HGU", {0x0B, 0x40, 0x18}, 3, _16M,  _64K, 3,
 		{
 			&READ_STD(0, INFINITE, 80),
-			&READ_DUAL(1, INFINITE, 108),
-			&READ_DUAL_ADDR(1, INFINITE, 108),
-			&READ_QUAD(1, INFINITE, 108),
-			&READ_QUAD_ADDR(3, INFINITE, 72),
+			//&READ_DUAL(1, INFINITE, 108),
+			//&READ_DUAL_ADDR(1, INFINITE, 108),
+			//&READ_QUAD(1, INFINITE, 108),
+			//&READ_QUAD_ADDR(3, INFINITE, 72),
 			0
 		},
 		{
 			&WRITE_STD(0, 256, 80),
-			&WRITE_QUAD(0, 256, 80),
+			//&WRITE_QUAD(0, 256, 80),
 			0
 		},
 		{
@@ -1562,15 +1562,15 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 		"XT25F64BSSI/HGU-S", {0x0B, 0x40, 0x17}, 3, _8M,  _64K, 3,
 		{
 			&READ_STD(0, INFINITE, 80),
-			&READ_DUAL(1, INFINITE, 108),
-			&READ_DUAL_ADDR(1, INFINITE, 108),
-			&READ_QUAD(1, INFINITE, 84),
-			&READ_QUAD_ADDR(3, INFINITE, 72),
+			//&READ_DUAL(1, INFINITE, 108),
+			//&READ_DUAL_ADDR(1, INFINITE, 108),
+			//&READ_QUAD(1, INFINITE, 84),
+			//&READ_QUAD_ADDR(3, INFINITE, 72),
 			0
 		},
 		{
 			&WRITE_STD(0, 256, 80),
-			&WRITE_QUAD(0, 256, 80),
+			//&WRITE_QUAD(0, 256, 80),
 			0
 		},
 		{
@@ -1585,14 +1585,14 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         {
             &READ_STD(0, INFINITE, 50),
             //&READ_FAST(1, INFINITE, 80),
-            //&READ_DUAL(1, INFINITE, 80),
-            //&READ_QUAD(1, INFINITE, 80),
+            ////&READ_DUAL(1, INFINITE, 80),
+            ////&READ_QUAD(1, INFINITE, 80),
             0
         },
 
         {
             &WRITE_STD(0, 256, 80),
-            //&WRITE_QUAD(0, 256, 80),
+            ////&WRITE_QUAD(0, 256, 80),
             0
         },
 
