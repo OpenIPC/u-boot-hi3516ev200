@@ -433,7 +433,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         },
 
         {
-            &WRITE_STD(0, 256, 80),
+            &WRITE_STD(0, 256, 50),
             //&WRITE_QUAD_ADDR(0, 256, 108),
             0
         },
@@ -1106,6 +1106,33 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
     /* CFEON EN25QH64A 3.3V */
     {
         "EN25QH64A", {0x1c, 0x70, 0x17}, 3, (_64K * 128),  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 50),
+            &READ_FAST(1, INFINITE, 104),
+            //&READ_DUAL(1, INFINITE, 104),
+            //&READ_DUAL_ADDR(1, INFINITE, 104),
+#ifndef CONFIG_CLOSE_SPI_8PIN_4IO
+            //&READ_QUAD(1, INFINITE, 104),
+            //&READ_QUAD_ADDR(3, INFINITE, 104),
+#endif
+            0
+        },
+
+        {
+            &WRITE_STD(0, 256, 80),
+            0
+        },
+
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
+            0
+        },
+        &spi_driver_no_qe,
+    },
+
+    /* CFEON EN25QH128A 3.3V */
+    {
+        "EN25QH128A", {0x1c, 0x70, 0x18}, 3, (_64K * 256),  _64K, 3,
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
