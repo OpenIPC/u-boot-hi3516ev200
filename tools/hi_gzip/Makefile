@@ -9,7 +9,7 @@ all: gzip hi_gzip
 gzip:
 	tar -xf gzip-1.8.tar.gz
 	cd gzip-1.8
-	pushd gzip-1.8;patch -p1 < ../hi_gzip.patch;./configure;make -j12;popd
+	pushd gzip-1.8;patch -p1 < ../hi_gzip.patch;patch -p1 < ../gzip_glibc.patch;./configure;make -j12;popd
 
 hi_gzip: $(OBJS) 
 	mkdir bin -p
