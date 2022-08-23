@@ -13,8 +13,7 @@ cp config-${soc} .config
 cp reg_info_${soc}.bin .reg
 make -j8 #KCFLAGS=-DCONFIG_XM_COMPATIBLE=1
 
-make -C tools/hi_gzip
-cp tools/hi_gzip/bin/gzip arch/arm/cpu/armv7/${soc}/hw_compressed/ -rf
+[ ! -f tools/hi_gzip/bin/gzip ] && make -C tools/hi_gzip || cp tools/hi_gzip/bin/gzip arch/arm/cpu/armv7/${soc}/hw_compressed/ -rf
 
 make u-boot-z.bin
 
