@@ -433,7 +433,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
         },
 
         {
-            &WRITE_STD(0, 256, 50),
+            &WRITE_STD(0, 256, 33),
             //&WRITE_QUAD_ADDR(0, 256, 108),
             0
         },
