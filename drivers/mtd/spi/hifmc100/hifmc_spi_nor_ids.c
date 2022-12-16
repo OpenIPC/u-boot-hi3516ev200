@@ -292,6 +292,7 @@ static struct spi_drv spi_driver_xtx = {
  *      XMC     		XM25QH128B      		16M     	64K 	3V3
  *		XTX				XT25F128BSSI/HGU		16M			64K		3V3
  *		XTX				XM25QH64				8M			64K		3V3
+ *      ZBIT  			ZB25VQ128A        		16M         64K     3V3
  ************************************************************************************************* */
 static struct spi_nor_info hifmc_spi_nor_info_table[] = {
     /* name     id  id_len  chipsize(Bytes) erasesize  */
@@ -1625,6 +1626,27 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 
         {
             &ERASE_SECTOR_64K(0, _64K, 80),
+            0
+        },
+        &spi_driver_no_qe,
+    },
+    
+    /* ZBIT ZB25VQ128A 3.3V */
+    {
+        "ZB25VQ128A", {0x5e, 0x40, 0x18}, 3, (_64K * 256),  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 50),
+            &READ_FAST(1, INFINITE, 104),
+            0
+        },
+
+        {
+            &WRITE_STD(0, 256, 80),
+            0
+        },
+
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
             0
         },
         &spi_driver_no_qe,
