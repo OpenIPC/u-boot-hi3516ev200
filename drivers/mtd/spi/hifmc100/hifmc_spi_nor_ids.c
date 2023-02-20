@@ -1633,7 +1633,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 
     /* ZBIT ZB25VQ64A 3.3V */
     {
-        "ZB25VQ64A", {0x5e, 0x40, 0x17}, 3, (_64K * 256),  _64K, 3,
+        "ZB25VQ64A", {0x5e, 0x40, 0x17}, 3, _8M,  _64K, 3,
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
@@ -1654,7 +1654,7 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
 
     /* ZBIT ZB25VQ128A 3.3V */
     {
-        "ZB25VQ128A", {0x5e, 0x40, 0x18}, 3, (_64K * 256),  _64K, 3,
+        "ZB25VQ128A", {0x5e, 0x40, 0x18}, 3, _16M,  _64K, 3,
         {
             &READ_STD(0, INFINITE, 50),
             &READ_FAST(1, INFINITE, 104),
