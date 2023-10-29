@@ -279,20 +279,22 @@ static struct spi_drv spi_driver_xtx = {
  *      ESMT/CFEON  	EN25Q64         		8M          64K     3V3
  *      ESMT/CFEON  	EN25Q128        		16M         64K     3V3
  *      ESMT/CFEON  	F25L64QA        		8M          64K     3V3
- *      GD      		GD25Q64         		8M          64K     3V3
- *      GD      		GD25LQ128       		16M         64K     1V8
- *      GD      		GD25Q128        		16M         64K     3V3
- *      GD      		GD25LQ64C       		8M          64K     1V8
- *      GD      		GD25Q32         		4M          64K     3V3
- *      GD      		GD25Q16C        		2M      	64K     3V3
+ *      GD      	GD25Q64         		8M          64K     3V3
+ *      GD      	GD25LQ128       		16M         64K     1V8
+ *      GD      	GD25Q128        		16M         64K     3V3
+ *      GD      	GD25LQ64C       		8M          64K     1V8
+ *      GD      	GD25Q32         		4M          64K     3V3
+ *      GD      	GD25Q16C        		2M      	64K     3V3
+ *      GM              GM25Q64ASIG                     8M          64K     3V3
+ *      GM              GM25Q128ASIG                    16M         64K     3V3
  *      Paragon     	PN25F16S        		2M      	64K     3V3
  *      Paragon     	PN25F32S        		4M          64K     3V3
- *      XMC     		XM25QH64AHIG        	8M      	64K 	3V3
- *      XMC     		XM25QH128A      		16M     	64K 	3V3
- *      XMC     		XM25QH128B      		16M     	64K 	3V3
- *		XTX				XT25F128BSSI/HGU		16M			64K		3V3
- *		XTX				XM25QH64				8M			64K		3V3
- *      ZBIT  			ZB25VQ128A        		16M         64K     3V3
+ *      XMC     	XM25QH64AHIG        	8M      	64K 	3V3
+ *      XMC     	XM25QH128A      		16M     	64K 	3V3
+ *      XMC     	XM25QH128B      		16M     	64K 	3V3
+ *	XTX		XT25F128BSSI/HGU		16M			64K		3V3
+ *	XTX		XM25QH64				8M			64K		3V3
+ *      ZBIT  		ZB25VQ128A        		16M         64K     3V3
  ************************************************************************************************* */
 static struct spi_nor_info hifmc_spi_nor_info_table[] = {
     /* name     id  id_len  chipsize(Bytes) erasesize  */
@@ -1422,6 +1424,48 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
             0
         },
         &spi_driver_gd25qxxx,
+    },
+
+    /* CFX GM25Q64ASIG 3.3v */
+    {
+        "GM25Q64ASIG", {0x1C, 0x40, 0x17}, 3, _8M,  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 55),
+            &READ_FAST(1, INFINITE, 104),
+            0
+        },
+
+        {
+            &WRITE_STD(0, 256, 55),
+            0
+        },
+
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
+            0
+        },
+        &spi_driver_no_qe,
+    },
+
+    /* CFX GM25Q128ASIG 3.3v */
+    {
+        "GM25Q128ASIG", {0x1C, 0x40, 0x18}, 3, _16M,  _64K, 3,
+        {
+            &READ_STD(0, INFINITE, 55),
+            &READ_FAST(1, INFINITE, 104),
+            0
+        },
+
+        {
+            &WRITE_STD(0, 256, 55),
+            0
+        },
+
+        {
+            &ERASE_SECTOR_64K(0, _64K, 104),
+            0
+        },
+        &spi_driver_no_qe,
     },
 
     /* Paragon 3.3V */
