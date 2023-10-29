@@ -1430,13 +1430,13 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
     {
         "GM25Q64ASIG", {0x1C, 0x40, 0x17}, 3, _8M,  _64K, 3,
         {
-            &READ_STD(0, INFINITE, 55),
+            &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 104),
             0
         },
 
         {
-            &WRITE_STD(0, 256, 55),
+            &WRITE_STD(0, 256, 80),
             0
         },
 
@@ -1451,13 +1451,13 @@ static struct spi_nor_info hifmc_spi_nor_info_table[] = {
     {
         "GM25Q128ASIG", {0x1C, 0x40, 0x18}, 3, _16M,  _64K, 3,
         {
-            &READ_STD(0, INFINITE, 55),
+            &READ_STD(0, INFINITE, 80),
             &READ_FAST(1, INFINITE, 104),
             0
         },
 
         {
-            &WRITE_STD(0, 256, 55),
+            &WRITE_STD(0, 256, 80),
             0
         },
 
