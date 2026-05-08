@@ -101,14 +101,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Only hi3516ev300 is gated for now: widgetii/qemu-hisilicon's
-        # hi3516ev200 and hi3518ev300 machines stub the HiSilicon HW
-        # gzip decompressor, so u-boot-z.bin gets "Uncompress hardware
-        # decompress overtime! Fail!" instead of booting. Tracked at
-        #   https://github.com/widgetii/qemu-hisilicon/issues/60
-        # Add ev200 and 18ev300 here once that's closed.
+        # widgetii/qemu-hisilicon#60 (HW gzip decompressor stub for the
+        # ev200-family) is closed, so all three SoCs in this repo can
+        # be gated.
         include:
+          - { soc: hi3516ev200, machine: hi3516ev200 }
           - { soc: hi3516ev300, machine: hi3516ev300 }
+          - { soc: hi3518ev300, machine: hi3518ev300 }
     steps:
       - name: Install QEMU build deps
         run: |
