@@ -101,9 +101,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # widgetii/qemu-hisilicon#60 (HW gzip decompressor stub for the
-        # ev200-family) is closed, so all three SoCs in this repo can
-        # be gated.
         include:
           - { soc: hi3516ev200, machine: hi3516ev200 }
           - { soc: hi3516ev300, machine: hi3516ev300 }
