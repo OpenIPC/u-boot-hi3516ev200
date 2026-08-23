@@ -275,7 +275,6 @@ int misc_init_r(void)
 #ifdef CONFIG_RANDOM_ETHADDR
     random_init_r();
 #endif
-    setenv("verify", "n");
 
 #if (CONFIG_AUTO_UPDATE == 1)
     /* auto update flag */

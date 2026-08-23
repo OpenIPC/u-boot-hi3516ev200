@@ -275,7 +275,6 @@ int misc_init_r(void)
     random_init_r();
 #endif
     detect_memory();
-    setenv("verify", "n");
 
 #if (CONFIG_AUTO_UPDATE == 1)
     /* auto update flag */
