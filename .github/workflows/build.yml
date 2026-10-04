@@ -170,34 +170,9 @@ jobs:
             exit 1
           fi
 
-  publish:
-    needs: [build, qemu_smoke]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-
-      - name: Upload to OpenIPC/firmware latest release
-        env:
-          GH_TOKEN: ${{ secrets.FIRMWARE_RELEASE_TOKEN }}
-        run: |
-          set -eu
-          upload() {
-            local f="$1" i
-            for i in 1 2 3 4 5; do
-              if gh release upload latest "$f" --clobber -R OpenIPC/firmware; then
-                return 0
-              fi
-              [ "$i" = "5" ] && return 1
-              echo "upload attempt $i failed; sleeping $((i*10))s" >&2
-              sleep $((i*10))
-            done
-          }
-          for soc in hi3516ev200 hi3516ev300 hi3518ev300; do
-            f="artifacts/u-boot-${soc}-universal/u-boot-${soc}-universal.bin"
-            test -f "$f"
-            upload "$f"
-          done
+  # No publish job. hi3516ev200, hi3516ev300 and hi3518ev300 now boot the
+  # bootloader OpenIPC/u-boot-xmedia builds and publishes, as
+  # u-boot-<soc>-nor.bin and u-boot-<soc>-nand.bin: it carries the UBI-only
+  # NAND layout the firmware installs. This repo still builds and
+  # smoke-tests, but its u-boot-<soc>-universal.bin no longer overwrites
+  # anything in the OpenIPC/firmware release.
